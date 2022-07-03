@@ -3,21 +3,37 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "version.json": "ef3ac0074bf0476633de26e352f48146",
-"index.html": "9b8c81a5f926fb4d9fd1e206028f5d01",
-"/": "9b8c81a5f926fb4d9fd1e206028f5d01",
-"main.dart.js": "456df67a32f24414d2a35e8b1980085c",
+  "version.json": "0a7fedaa9f034b915cbdc01b8610ea02",
+"index.html": "1616d7a37f9ce717b295ed6f8bcd99d1",
+"/": "1616d7a37f9ce717b295ed6f8bcd99d1",
+"main.dart.js": "11a401ae01c23987cf678b7015a84b56",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"manifest.json": "b13b0a6fdd7a84568634e94434737544",
-"assets/AssetManifest.json": "2efbb41d7877d10aac9d091f58ccd7b9",
-"assets/NOTICES": "b48bd9be818bbadf257dada15252c7d8",
-"assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
+"manifest.json": "da9db02b6c110b09d9da86d9fb6c949c",
+"assets/AssetManifest.json": "56194e22bae5e9ac6229371465d24841",
+"assets/NOTICES": "809fe85ed7e65dedaacd669eec6b8c78",
+"assets/FontManifest.json": "b5bd421dd407f0a8ec6ceb157660aa5a",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
-"assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1"
+"assets/lib/app/asset/image/football_crop.png": "07826c0b0dd0d65aef001c88b21c289f",
+"assets/lib/app/asset/image/profile.png": "fcf12bbb64cf18da7816af9e623bbc11",
+"assets/lib/app/asset/image/football.png": "142bf6ba37e3cd12813f9b57ff58694c",
+"assets/lib/app/asset/image/basketball.png": "693ae372d4a9588cef032a59222a2b73",
+"assets/lib/app/asset/fonts/Poppins-ExtraLight.ttf": "86a2f13e91ac85080ebaeaab9463b9f1",
+"assets/lib/app/asset/fonts/Poppins-BoldItalic.ttf": "09775bde3e9448b38c063b746e21cb6b",
+"assets/lib/app/asset/fonts/Poppins-ExtraBoldItalic.ttf": "29f7dd016eeed2bcd79ba482eb3f27ec",
+"assets/lib/app/asset/fonts/Poppins-ExtraBold.ttf": "544fa4f2678a8285eb88b8dfe503c90c",
+"assets/lib/app/asset/fonts/Poppins-BlackItalic.ttf": "3fb21c8084013f3d0176bc98bcf76e60",
+"assets/lib/app/asset/fonts/Poppins-Regular.ttf": "8b6af8e5e8324edfd77af8b3b35d7f9c",
+"assets/lib/app/asset/fonts/Poppins-Bold.ttf": "a3e0b5f427803a187c1b62c5919196aa",
+"assets/lib/app/asset/fonts/Poppins-Black.ttf": "0573b9231a8316427ad6e751b52e87a4",
+"assets/fonts/MaterialIcons-Regular.otf": "7e7a6cccddf6d7b20012a548461d5d81",
+"canvaskit/canvaskit.js": "c2b4e5f3d7a3d82aed024e7249a78487",
+"canvaskit/profiling/canvaskit.js": "ae2949af4efc61d28a4a80fffa1db900",
+"canvaskit/profiling/canvaskit.wasm": "95e736ab31147d1b2c7b25f11d4c32cd",
+"canvaskit/canvaskit.wasm": "4b83d89d9fecbea8ca46f2f760c5a9ba"
 };
 
 // The application shell files that are downloaded before a service worker can
