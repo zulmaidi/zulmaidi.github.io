@@ -3,46 +3,30 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "version.json": "0a7fedaa9f034b915cbdc01b8610ea02",
-"index.html": "ffd0c5014f226f644af578ffc9d5c47e",
-"/": "ffd0c5014f226f644af578ffc9d5c47e",
-"main.dart.js": "7e5ec1b0b1cc053e226d8f30e68d68dc",
-"flutter.js": "f85e6fb278b0fd20c349186fb46ae36d",
+  "version.json": "ef3ac0074bf0476633de26e352f48146",
+"index.html": "9b8c81a5f926fb4d9fd1e206028f5d01",
+"/": "9b8c81a5f926fb4d9fd1e206028f5d01",
+"main.dart.js": "456df67a32f24414d2a35e8b1980085c",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-maskable-192.png": "c457ef57daa1d16f64b27b786ec2ea3c",
 "icons/Icon-maskable-512.png": "301a7604d45b3e739efc881eb04896ea",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"manifest.json": "da9db02b6c110b09d9da86d9fb6c949c",
-"assets/AssetManifest.json": "56194e22bae5e9ac6229371465d24841",
-"assets/NOTICES": "d5c4a29b6211e631c4779b641f1b9984",
-"assets/FontManifest.json": "b5bd421dd407f0a8ec6ceb157660aa5a",
+"manifest.json": "b13b0a6fdd7a84568634e94434737544",
+"assets/AssetManifest.json": "2efbb41d7877d10aac9d091f58ccd7b9",
+"assets/NOTICES": "b48bd9be818bbadf257dada15252c7d8",
+"assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
-"assets/shaders/ink_sparkle.frag": "baec4ffe56676ef95bd94684a0c70e34",
-"assets/lib/app/asset/image/football_crop.png": "07826c0b0dd0d65aef001c88b21c289f",
-"assets/lib/app/asset/image/profile.png": "fcf12bbb64cf18da7816af9e623bbc11",
-"assets/lib/app/asset/image/football.png": "142bf6ba37e3cd12813f9b57ff58694c",
-"assets/lib/app/asset/image/basketball.png": "693ae372d4a9588cef032a59222a2b73",
-"assets/lib/app/asset/fonts/Poppins-ExtraLight.ttf": "86a2f13e91ac85080ebaeaab9463b9f1",
-"assets/lib/app/asset/fonts/Poppins-BoldItalic.ttf": "09775bde3e9448b38c063b746e21cb6b",
-"assets/lib/app/asset/fonts/Poppins-ExtraBoldItalic.ttf": "29f7dd016eeed2bcd79ba482eb3f27ec",
-"assets/lib/app/asset/fonts/Poppins-ExtraBold.ttf": "544fa4f2678a8285eb88b8dfe503c90c",
-"assets/lib/app/asset/fonts/Poppins-BlackItalic.ttf": "3fb21c8084013f3d0176bc98bcf76e60",
-"assets/lib/app/asset/fonts/Poppins-Regular.ttf": "8b6af8e5e8324edfd77af8b3b35d7f9c",
-"assets/lib/app/asset/fonts/Poppins-Bold.ttf": "a3e0b5f427803a187c1b62c5919196aa",
-"assets/lib/app/asset/fonts/Poppins-Black.ttf": "0573b9231a8316427ad6e751b52e87a4",
-"assets/fonts/MaterialIcons-Regular.otf": "95db9098c58fd6db106f1116bae85a0b",
-"canvaskit/canvaskit.js": "2bc454a691c631b07a9307ac4ca47797",
-"canvaskit/profiling/canvaskit.js": "38164e5a72bdad0faa4ce740c9b8e564",
-"canvaskit/profiling/canvaskit.wasm": "95a45378b69e77af5ed2bc72b2209b94",
-"canvaskit/canvaskit.wasm": "bf50631470eb967688cca13ee181af62"
+"assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1"
 };
 
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = [
-  "main.dart.js",
+  "/",
+"main.dart.js",
 "index.html",
+"assets/NOTICES",
 "assets/AssetManifest.json",
 "assets/FontManifest.json"];
 // During install, the TEMP cache is populated with the application shell files.
@@ -141,11 +125,9 @@ self.addEventListener("fetch", (event) => {
     .then((cache) =>  {
       return cache.match(event.request).then((response) => {
         // Either respond with the cached resource, or perform a fetch and
-        // lazily populate the cache only if the resource was successfully fetched.
+        // lazily populate the cache.
         return response || fetch(event.request).then((response) => {
-          if (response && Boolean(response.ok)) {
-            cache.put(event.request, response.clone());
-          }
+          cache.put(event.request, response.clone());
           return response;
         });
       })
